@@ -1,0 +1,20 @@
+npm init
+
+npm install express (for api)
+npm install mysql
+npm install dotenv (to hide) 
+npm install --save-dev nodemon (to auto update) 
+npm install bcrypt (for hash and encrypt)
+npm install jsonwebtoken (for authentication)
+
+node app.js OR node [any file name]
+npm start (before this, you have to update script on package.json)
+
+{
+	"firstName": "Huzaifa", 
+	"lastName":  "Hassan", 
+	"gender": "m", 
+	"email":"test@gmail.com", 
+	"password":"test123", 
+	"number": 798565093
+}
