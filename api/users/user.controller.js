@@ -86,6 +86,14 @@ module.exports = {
                 });
             }
 
+            if (!results.affectedRows) {
+                return res.json({
+                    success: 0,
+                    message: "Record not found"
+                });
+            }
+            
+
             return res.json({
                 success: 1,
                 data: "Updated Successfully"
