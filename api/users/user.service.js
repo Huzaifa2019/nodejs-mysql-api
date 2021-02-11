@@ -81,11 +81,12 @@ module.exports = {
             [
                 id
             ],
-            (error, results, fields) => {
+            (error, results) => {
                 if (error) {
                     return callBack(error);
                 }
-                return callBack(null, results[0]);
+                
+                return callBack(null, results);
             }
 
         );

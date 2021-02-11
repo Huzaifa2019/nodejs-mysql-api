@@ -32,7 +32,8 @@ module.exports = {
                     message: "Database connection error"
                 });
             }
-            if (!results) {
+
+            if (!results[0]) {
                 return res.json({
                     success: 0,
                     message: "Record not found"
@@ -62,6 +63,8 @@ module.exports = {
                     message: "Record not found"
                 });
             }
+            
+            
             return res.json({
                 success: 1,
                 data: results
@@ -102,7 +105,12 @@ module.exports = {
                 });
             
             }
-            console.log(res.affectedRows);
+            if (results.affectedRows == 0) {
+                return res.json({
+                    success: 0,
+                    message: "ID not exist"
+                });
+            }
             return res.json({
                 success: 1,
                 data: "User Deleted Successfully"
