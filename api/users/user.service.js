@@ -92,6 +92,8 @@ module.exports = {
         );
     },
 
+    
+
     // for authentication
     getUserByUserEmail: (email, callBack) => {
         pool.query(
